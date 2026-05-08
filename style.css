@@ -1,18 +1,42 @@
 #projects {
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color: var(--surface);
 }
 
 #projects h2 {
     text-align: center;
+    color: var(--text);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
 }
 
 .project-card {
-    background: white;
+    background: rgba(255,255,255,0.05);
     padding: 20px;
     margin: 20px auto;
     width: 80%;
     border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    color: var(--accent);
+}
+
+.project-card a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-card a:hover {
+    color: var(--accent-hover);
 }
 :root {
   --bg: #0a0a0a;
@@ -349,4 +373,143 @@ body {
 .btn-outline:hover {
     border-color: var(--accent);
     color: var(--accent);
+}
+
+/* About Team Section Styles */
+.about-team {
+    padding: 100px 0;
+    background-color: var(--surface);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 0 auto 40px;
+}
+
+.about-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 850px;
+    margin: 0 auto 60px;
+}
+
+.about-content strong {
+    color: var(--accent);
+}
+
+.team-goals h3,
+.team-members h3 {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.goals-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.goal-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 40px 25px;
+    background: rgba(201,169,110,0.05);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+    background: rgba(201,169,110,0.1);
+    border-color: var(--accent);
+    box-shadow: 0 15px 30px rgba(201,169,110,0.2);
+}
+
+.goal-card h4 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.goal-card p {
+    color: var(--text-muted);
+}
+
+.members-list {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 1.5px;
+    padding: 20px;
+    background: rgba(201,169,110,0.08);
+    display: inline-block;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    background: var(--bg);
+    color: var(--text-muted);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .team-goals h3,
+    .team-members h3 {
+        font-size: 1.5rem;
+    }
+
+    .goals-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .goal-card {
+        padding: 25px 15px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    #projects h2 {
+        font-size: 1.8rem;
+    }
 }
