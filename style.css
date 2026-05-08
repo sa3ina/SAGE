@@ -1,0 +1,16 @@
+#projects {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
